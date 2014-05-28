@@ -7,7 +7,7 @@ public class HelloWorld {
 			
 		Scanner inscan = new Scanner(System.in);
 		
-		System.out.println("Hopw many people? : ");
+		System.out.println("How many people? : ");
 		
 		int Num;
 		Num = inscan.nextInt();
@@ -15,7 +15,7 @@ public class HelloWorld {
 		People a[] = new People[Num];
 		
 		for(int i=0; i<Num; i++) {
-			System.out.println("Enter Friend ?: ");
+			System.out.println("Do you Enter a Friend? say 'yes' or 'no'  ");
 			String typePeople = new String(inscan.next()); 
 			
 			if (typePeople.equals("Yes") ) {
