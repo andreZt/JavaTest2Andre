@@ -7,7 +7,7 @@ public class HelloWorld {
 			
 		Scanner inscan = new Scanner(System.in);
 		
-		System.out.println("How many people??? : ");
+		System.out.println("How many people???? : ");
 		
 		int Num;
 		Num = inscan.nextInt();
