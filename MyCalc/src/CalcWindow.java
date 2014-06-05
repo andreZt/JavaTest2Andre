@@ -23,31 +23,6 @@ public class CalcWindow extends JFrame {
 		GridBagLayout f = new GridBagLayout();
 		setLayout(f);
 		
-		GridBagConstraints form1 = new GridBagConstraints();
-		form1.anchor = GridBagConstraints.NORTH; 
-		form1.fill   = GridBagConstraints.BOTH;  
-		form1.gridheight = 2;  									// количество €чеек
-		form1.gridwidth  = GridBagConstraints.REMAINDER; 		// количество €чеек		; все оставшеес€ место в текущей строке
-		form1.gridx = 0;  // номер столбца
-		form1.gridy = 0;  // номер строки
-		
-		form1.ipadx = 0; // увеличить на
-		form1.ipady = 0;
-		form1.weightx = 0.0;
-		form1.weighty = 0.0;
-	//	form1.insets = new Insets(0, 1, 0, 1);
-		
-		GridBagConstraints form2 = new GridBagConstraints();
-		form2.gridx = 2;
-		form2.gridy = 2;
-		form2.gridheight = 1;
-		form2.gridwidth = 1;
-		form2.fill = GridBagConstraints.HORIZONTAL;
-		form2.weightx = 1.0;
-		form2.weighty = 1.0;
-		form2.anchor = GridBagConstraints.WEST;
-		
-		
 		// create element
 		JTextField pole = new JTextField();
 		JButton Button1 = new JButton("1");
@@ -60,24 +35,142 @@ public class CalcWindow extends JFrame {
 		JButton Button8 = new JButton("8");
 		JButton Button9 = new JButton("9");
 		JButton Button0 = new JButton("0");
-		f.setConstraints(pole, form1);
-		f.setConstraints(Button1, form2);
-		//f.setConstraints(Button2, form2);
-		//f.setConstraints(Button3);
-		//f.setConstraints(Button4);
+		JButton ButtonT = new JButton("=");
+		JButton ButtonDiv = new JButton("/");
+		JButton ButtonMn = new JButton("*");
+		JButton ButtonMin = new JButton("-");
+		JButton ButtonPlus = new JButton("+");
+		JButton ButtonP = new JButton(".");
 		
-		//f.setConstraints(Button5);
+		GridBagConstraints form1 = new GridBagConstraints();
+		
+		form1.anchor = GridBagConstraints.CENTER; 
+		form1.fill   =  GridBagConstraints.BOTH;  
+		form1.weightx = 100;
+		form1.weighty = 100;
+		form1.insets = new Insets(2, 2, 2, 2);
+	
+		
+		form1.gridheight = 1;  									// количество €чеек
+		form1.gridwidth  = 5; 		// количество €чеек		; все оставшеес€ место в текущей строке
+		form1.gridx = 0;  // номер строки
+	//	form1.gridy = 0;  // номер столбца
+	//	form1.ipadx = 0; // увеличить на
+		f.setConstraints(pole, form1);
 		add(pole);
-        add(Button1);
-       // add(Button2);
-       // add(Button3);
-      //  add(Button4);
-      //  add(Button5);
-      //  add(Button6);
-      //  add(Button7);
-      //  add(Button8);
-      //  add(Button9);
-      //  add(Button0);
+		
+		form1.gridx = 0;
+		form1.gridy = 1;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button7, form1);
+		add(Button7);
+		
+		form1.gridx = 1;
+		form1.gridy = 1;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button8, form1);
+		add(Button8);
+		
+		form1.gridx = 2;
+		form1.gridy = 1;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button9, form1);
+		add(Button9);
+		 
+		form1.gridx = 3;
+		form1.gridy = 1;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(ButtonDiv, form1);
+		add(ButtonDiv);
+		
+		form1.gridx = 4;
+		form1.gridy = 1;
+		form1.gridheight = 4;
+		form1.gridwidth = 1;
+		f.setConstraints(ButtonT, form1);
+		add(ButtonT);
+		
+		form1.gridx = 0;
+		form1.gridy = 2;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button4, form1);
+		add(Button4);
+		 
+		form1.gridx = 1;
+		form1.gridy = 2;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button5, form1);
+		add(Button5);
+		 
+		form1.gridx = 2;
+		form1.gridy = 2;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button6, form1);
+		add(Button6);
+        
+		form1.gridx = 3;
+		form1.gridy = 2;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(ButtonMn, form1);
+		add(ButtonMn);
+		
+		form1.gridx = 0;
+		form1.gridy = 3;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button1, form1);
+		add(Button1);
+		 
+		form1.gridx = 1;
+		form1.gridy = 3;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button2, form1);
+		add(Button2);
+		 
+		form1.gridx = 2;
+		form1.gridy = 3;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button3, form1);
+		add(Button3);
+        
+		form1.gridx = 3;
+		form1.gridy = 3;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(ButtonMin, form1);
+		add(ButtonMin);
+		
+		form1.gridx = 0;
+		form1.gridy = 4;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(Button0, form1);
+		add(Button0);
+		 
+		form1.gridx = 1;
+		form1.gridy = 4;
+		form1.gridheight = 1;
+		form1.gridwidth = 1;
+		f.setConstraints(ButtonP, form1);
+		add(ButtonP);
+		 
+	        
+		form1.gridx = 2;
+		form1.gridy = 4;
+		form1.gridheight = 1;
+		form1.gridwidth = 2;
+		f.setConstraints(ButtonPlus, form1);
+		add(ButtonPlus);
         
         setTitle("My Calc");
         setSize(300, 300);
