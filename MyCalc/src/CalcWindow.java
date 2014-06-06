@@ -91,6 +91,7 @@ public class CalcWindow extends JFrame {
 		form1.gridy = 1;
 		form1.gridheight = 4;
 		form1.gridwidth = 1;
+		form1.insets = new Insets(2, 9, 2, 2);
 		f.setConstraints(ButtonT, form1);
 		add(ButtonT);
 		
@@ -98,6 +99,7 @@ public class CalcWindow extends JFrame {
 		form1.gridy = 2;
 		form1.gridheight = 1;
 		form1.gridwidth = 1;
+		form1.insets = new Insets(2, 2, 2, 2);
 		f.setConstraints(Button4, form1);
 		add(Button4);
 		 
@@ -176,7 +178,8 @@ public class CalcWindow extends JFrame {
         setSize(300, 300);
         setVisible(true);
         
-        
-       
+        CalcEngine cEngine = new CalcEngine(this);
+        Button1.addActionListener(cEngine);
     }
+	
 }
