@@ -1,46 +1,59 @@
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
+
 import java.awt.Insets;
+import java.awt.event.*;
 
 import javax.swing.*;
 
-import sun.nio.cs.ext.GB18030;
 
 public class CalcWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 
+	JTextField pole;
+	JButton Button1;
+	JButton Button2;
+	JButton Button3;
+	JButton Button4;
+	JButton Button5;
+	JButton Button6;
+	JButton Button7;
+	JButton Button8;
+	JButton Button9;
+	JButton Button0;
+	JButton ButtonT;
+	JButton ButtonDiv;
+	JButton ButtonMn;
+	JButton ButtonMin;
+	JButton ButtonPlus;
+	JButton ButtonP;
+			
 	CalcWindow() {
-		// create JPanel
-	    // JPanel MainWindow = new JPanel();
-		
-		
-        // set layout manager
+		// create element
+		pole = new JTextField();
+		Button1 = new JButton("1");
+		Button2 = new JButton("2");
+		Button3 = new JButton("3");
+		Button4 = new JButton("4");
+		Button5 = new JButton("5");
+		Button6 = new JButton("6");
+		Button7 = new JButton("7");
+		Button8 = new JButton("8");
+		Button9 = new JButton("9");
+		Button0 = new JButton("0");
+		ButtonT = new JButton("=");
+		ButtonDiv = new JButton("/");
+		ButtonMn = new JButton("*");
+		ButtonMin = new JButton("-");
+		ButtonPlus = new JButton("+");
+		ButtonP = new JButton(".");
 		
 		// grid lay out
 		GridBagLayout f = new GridBagLayout();
 		setLayout(f);
 		
-		// create element
-		JTextField pole = new JTextField();
-		JButton Button1 = new JButton("1");
-		JButton Button2 = new JButton("2");
-		JButton Button3 = new JButton("3");
-		JButton Button4 = new JButton("4");
-		JButton Button5 = new JButton("5");
-		JButton Button6 = new JButton("6");
-		JButton Button7 = new JButton("7");
-		JButton Button8 = new JButton("8");
-		JButton Button9 = new JButton("9");
-		JButton Button0 = new JButton("0");
-		JButton ButtonT = new JButton("=");
-		JButton ButtonDiv = new JButton("/");
-		JButton ButtonMn = new JButton("*");
-		JButton ButtonMin = new JButton("-");
-		JButton ButtonPlus = new JButton("+");
-		JButton ButtonP = new JButton(".");
+		
 		
 		GridBagConstraints form1 = new GridBagConstraints();
 		
@@ -180,6 +193,47 @@ public class CalcWindow extends JFrame {
         
         CalcEngine cEngine = new CalcEngine(this);
         Button1.addActionListener(cEngine);
+        Button2.addActionListener(cEngine);
+        Button3.addActionListener(cEngine);
+        Button4.addActionListener(cEngine);
+        Button5.addActionListener(cEngine);
+        Button6.addActionListener(cEngine);
+        Button7.addActionListener(cEngine);
+        Button8.addActionListener(cEngine);
+        Button9.addActionListener(cEngine);
+        Button0.addActionListener(cEngine);
+        
+       // System.out.println( "good bye" ); 
+      addWindowListener(
+        		new WindowAdapter(){
+        			public void windowClosing( WindowEvent e ) {
+        				System.out.println( "good bye" ); 
+        				System.exit(0);
+        			}
+        		}
+        );
+   /*   addWindowListener(   
+        	      new java.awt.event.WindowAdapter()   
+        	      {  
+        	        public void windowClosing( java.awt.event.WindowEvent e )   
+        	        {  
+        	          System.out.println( "good bye" );  
+        	        
+        	          System.exit( 0 );  
+        	        }  
+        	      }
+        	    );  */
+      
     }
+	
+	public void SetdisplayText(String val) {
+		pole.setText(val);
+		
+	}
+	public String GetDisplayText() {
+		return pole.getText();
+		
+	}
+	
 	
 }

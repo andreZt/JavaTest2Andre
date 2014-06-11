@@ -14,7 +14,8 @@ public class CalcEngine implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		 JButton clickedButton=(JButton) e.getSource();
 		 String clickedButtonLabe = clickedButton.getText();
-		 JOptionPane.showConfirmDialog(null, clickedButtonLabe, "Jast test", JOptionPane.PLAIN_MESSAGE);
+		 //JOptionPane.showConfirmDialog(null, clickedButtonLabe, "Jast test", JOptionPane.PLAIN_MESSAGE);
+		 parent.SetdisplayText( parent.GetDisplayText()+clickedButtonLabe );
 	}
 
 }
