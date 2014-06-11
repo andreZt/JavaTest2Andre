@@ -103,3 +103,11 @@ p  {
 	float:none;
 	
 }
+table {
+	border: 4px solid #000;
+	border-collapse: collapse;
+}
+TD, TH {
+    padding: 5px; /* Поля вокруг текста */
+    border: 1px solid #CCC; /* Рамка вокруг ячеек */
+   }
