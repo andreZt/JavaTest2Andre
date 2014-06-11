@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	background:#999;
+	/*height: 99%;*/
+	
+}
+#storinka {
+	/*position:relative;*/
+	width:1000px;
+	background-color:#000;
+	margin:0 auto;
+	border:#630 double;	
+	/*min-height: 99%; */
+	
+}
+#header {
+	background: #000 top center url(images/header.jpg) no-repeat ;
+	height:200px;
+	border-bottom:#630 double;
+	
+}
+#menu {
+	float:left;
+	width:215px;
+	background:url(images/menu.jpg) #000 top center no-repeat ;
+	height:500px;
+	
+}
+#main {
+	margin-left:215px;	
+	background: #000  top center url(images/fon.jpg) no-repeat ;
+	color:#FFF;
+	padding: 10px 0;
+	border-left:#630 double;	
+	min-height:600px;
+
+}
+#avtor{
+	/*position:absolute;
+	bottom:0;*/
+	border-top:#630 double;
+	text-align:center;
+	height:15px;
+	background:url(images/footer1.jpg) center center #000 no-repeat;
+	padding: 1px 0;
+	
+	
+
+		
+}
+#menu ul li a {
+	list-style: none outside;
+	color: #CCC;
+	font-size:22px;
+	font-family:Verdana;
+	text-decoration:none;
+	display: block;
+}
+#menu a:hover {
+	color:#333;
+	cursor:pointer;
+	padding-left:5px;
+	text-transform:uppercase;
+}
+#main ul li {
+	list-style:disc outside;
+}
+img {
+	float:right;
+	margin:15px;
+	border: #CCC double;
+}
+
+h1  {
+	text-indent:25px;
+	text-align:center;
+}
+
+p  {
+	text-indent:25px;
+	margin:0px 10px 10px 10px;
+	text-align:justify;
+
+
+}
+.mus {
+	float:left;
+	margin-left:30px;		
+}
+#main a:hover img {
+	border: #666 double;
+}
+#main .albom li{
+	list-style: decimal-leading-zero outside;
+	margin:10px;	
+	color: #CCC;
+	font-size:23px;
+	font-family:Verdana;
+	text-decoration:none;
+}
+.photo {
+	float:none;
+	
+}
